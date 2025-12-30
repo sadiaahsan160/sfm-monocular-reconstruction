@@ -23,7 +23,7 @@ The SfM pipeline consists of the following stages:
 * Monocular image sequence (images with sufficient overlap)  
 * known Camera intrinsic parameters (e.g., `K.txt`)`
   <img width="641" height="272" alt="image" src="https://github.com/user-attachments/assets/877e1a91-f8f9-4c3f-9ae1-c08fd49b6d03" />
-  *Sample input image from the dataset*
+
 
 
 ## 📤 Output
@@ -34,15 +34,15 @@ The SfM pipeline consists of the following stages:
   
 ### Feature points
 <img width="220" height="307" alt="SIFT features" src="https://github.com/user-attachments/assets/d6d27b00-eac1-45b0-b890-070a7da9cfda" />  
-*Detected SIFT keypoints (circle size indicates scale)*
+
 
 ### Feature matching
 <img width="535" height="393" alt="Feature matches" src="https://github.com/user-attachments/assets/05f351c5-1b78-4656-985c-1db5c5b7e817" />  
-*Subset of matched features between two images*
+
 
 ### Sparse 3D point cloud
 <img width="837" height="293" alt="Sparse 3D point cloud" src="https://github.com/user-attachments/assets/044566ce-bd70-412f-a7b5-bb778bf46c0d" />  
-*Reconstructed colored sparse 3D point cloud*
+
 
 
 ## ⚙️ Dependencies
