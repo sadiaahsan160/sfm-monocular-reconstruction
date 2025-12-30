@@ -27,7 +27,7 @@ The SfM pipeline consists of the following stages:
 - Colored sparse 3D point cloud  (`.ply` format)
 - Viewable in **MeshLab** or **CloudCompare**
 
-- <img width="837" height="293" alt="image" src="https://github.com/user-attachments/assets/044566ce-bd70-412f-a7b5-bb778bf46c0d" />
+   <img width="837" height="293" alt="image" src="https://github.com/user-attachments/assets/044566ce-bd70-412f-a7b5-bb778bf46c0d" />
 
 
 ## ⚙️ Dependencies
