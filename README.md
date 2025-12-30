@@ -1,6 +1,7 @@
 # Structure from Motion (SfM)
-his project implements an incremental **Structure from Motion (SfM)** pipeline to reconstruct a **sparse 3D point cloud** from a monocular image sequence using classical multi-view geometry techniques.
+This project implements an incremental **Structure from Motion (SfM)** pipeline to reconstruct a **sparse 3D point cloud** from a monocular image sequence using classical multi-view geometry techniques.
 The implementation follows an incremental SfM approach, where camera poses and 3D points are estimated progressively as new images are added.
+<img width="837" height="293" alt="image" src="https://github.com/user-attachments/assets/2a2c87de-abc8-4910-8b77-599abd2ea38e" />
 
 # Pipeline Overview
 
@@ -17,23 +18,26 @@ The SfM pipeline consists of the following stages:
 9. Reprojection error validation
 10. Sparse point cloud export (`.ply`)
 
-## Dataset
+## 📂 Dataset
 
-* **Gustav II Adolf dataset** (monocular image sequence)
-* Images captured with sufficient overlap for multi-view geometry
-* Camera intrinsic parameters provided in `K.txt`
+* **Monocular image sequence** with sufficient overlap between frames
+* known Camera intrinsic parameters (e.g., in `K.txt`)`
 
 ## 📤 Output
+- Colored sparse 3D point cloud  (`.ply` format)
+- Viewable in **MeshLab** or **CloudCompare**
 
-* **Colored sparse 3D point cloud**
-* Exported in `.ply` format
-* Viewable in **MeshLab** or **CloudCompare**
+## ⚙️ Dependencies
 
-## ⚙️ Environment Setup
+* Python 3.x  
+* OpenCV (`opencv-python`)  
+* NumPy  
+* SciPy  
+* Matplotlib  
+* tqdm  
+* tomlkit  
 
-This project was developed and tested in **Google Colab**.
+Install via pip:
 
 ```bash
-pip install tomlkit
-pip uninstall opencv-python opencv-python-headless -y
-pip install opencv-python
+pip install opencv-python numpy scipy matplotlib tqdm tomlkit
