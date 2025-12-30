@@ -1,7 +1,7 @@
 # Structure from Motion (SfM)
 This project implements an incremental **Structure from Motion (SfM)** pipeline to reconstruct a **sparse 3D point cloud** from a monocular image sequence using classical multi-view geometry techniques.
 The implementation follows an incremental SfM approach, where camera poses and 3D points are estimated progressively as new images are added.
-<img width="837" height="293" alt="image" src="https://github.com/user-attachments/assets/2a2c87de-abc8-4910-8b77-599abd2ea38e" />
+
 
 # Pipeline Overview
 
@@ -26,6 +26,9 @@ The SfM pipeline consists of the following stages:
 ## 📤 Output
 - Colored sparse 3D point cloud  (`.ply` format)
 - Viewable in **MeshLab** or **CloudCompare**
+
+- <img width="837" height="293" alt="image" src="https://github.com/user-attachments/assets/044566ce-bd70-412f-a7b5-bb778bf46c0d" />
+
 
 ## ⚙️ Dependencies
 
