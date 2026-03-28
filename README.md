@@ -66,3 +66,56 @@ Install via pip:
 
 ```bash
 pip install opencv-python numpy scipy matplotlib tqdm tomlkit
+```
+
+
+## Neural Radiance Fields (NeRF)
+
+This section implements a **Neural Radiance Field (NeRF)** to model a 3D scene and synthesize novel views using a neural network.
+
+### Pipeline
+
+
+1. **Data Loading**: Images, camera poses, and focal length are loaded from the Tiny NeRF dataset (`tiny_nerf_data.npz`).
+2. **Positional Encoding**: 3D spatial coordinates and viewing directions are encoded into a higher-dimensional space using sinusoidal functions.
+3. **Neural Network (MLP)**: The encoded coordinates are passed to a Multi-Layer Perceptron (MLP) that predicts:
+   - Volume density (σ)
+   - RGB color (c) at each point in 3D space
+4. **Differentiable Volume Rendering**: Rays are cast from the camera; radiance and density along each ray are integrated to generate the final image.
+5. **Loss & Optimization**: Mean Squared Error (MSE) between rendered and ground truth images is minimized using the Adam optimizer.
+6. **Training & Evaluation**: The model is trained on the Tiny NeRF dataset, and performance is evaluated using MSE and PSNR metrics.
+
+**Output:** Photorealistic rendered views
+
+---
+
+### 📂Dataset
+
+* **Images**: 106 images of size 100x100 pixels (RGB)
+* **Camera Poses**: 106 camera poses (4x4 transformation matrices)
+* **Format**: `.npz` file containing images, poses, and focal length  
+
+---
+
+### Results
+
+#### Original vs Rendered Image
+<img width="794" height="394" alt="image" src="https://github.com/user-attachments/assets/2c1bc17d-4452-4ace-80cc-ba708efc59d6" />
+
+
+### PSNR Over Iterations
+<img width="387" height="268" alt="image" src="https://github.com/user-attachments/assets/d7cdd794-c5ed-4e55-9a2c-22bdee118ef7" />
+
+### Video Visualization
+![video](https://github.com/user-attachments/assets/4e6217fb-c47f-4362-a43c-1c64ce16449c)
+
+---
+
+## Key Insights
+
+- SfM reconstructs explicit 3D geometry using feature correspondences across images  
+- NeRF learns an implicit representation of the scene using neural networks  
+- SfM is efficient and interpretable but produces sparse reconstructions  
+- NeRF generates high-quality renderings but requires significant computation  
+
+---
