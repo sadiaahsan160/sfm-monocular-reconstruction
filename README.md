@@ -8,15 +8,14 @@ The implementation follows an incremental SfM approach, where camera poses and 3
 The SfM pipeline consists of the following stages:
 
 1. Camera intrinsic loading
-2. Image loading and downscaling
-3. Feature detection and matching (SIFT + KNN)
-4. Two-view geometry (Essential matrix estimation)
-5. Initial camera pose recovery
-6. Triangulation of initial 3D points
-7. Incremental camera pose estimation using PnP
-8. Incremental triangulation of new points
-9. Reprojection error validation
-10. Sparse point cloud export (`.ply`)
+2. Feature detection and matching (SIFT + KNN)
+3. Essential matrix estimation (RANSAC)
+4. Camera pose recovery
+5. Triangulation of 3D points
+6. Incremental pose estimation using PnP
+7. Reprojection error validation
+
+Output: Sparse 3D point cloud (.ply)
 
 ## 📂 Dataset
 
