@@ -36,10 +36,6 @@ The SfM pipeline consists of the following stages:
 <img width="220" height="307" alt="SIFT features" src="https://github.com/user-attachments/assets/d6d27b00-eac1-45b0-b890-070a7da9cfda" />  
 
 
-### Feature matching
-<img width="535" height="393" alt="Feature matches" src="https://github.com/user-attachments/assets/05f351c5-1b78-4656-985c-1db5c5b7e817" />  
-
-
 ### Sparse 3D point cloud
 <img width="837" height="293" alt="Sparse 3D point cloud" src="https://github.com/user-attachments/assets/044566ce-bd70-412f-a7b5-bb778bf46c0d" />  
 
