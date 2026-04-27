@@ -1,5 +1,5 @@
 # 3D Reconstruction using SfM and NeRF 
- 
+  
 ## Overview
 This project explores 3D reconstruction from images using two fundamentally different approaches:
 
